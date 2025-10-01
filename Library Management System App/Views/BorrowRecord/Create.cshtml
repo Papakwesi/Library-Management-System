@@ -1,0 +1,50 @@
+﻿@model Library_Management_System_App.ViewModels.BorrowRecordVM
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Create Borrow Record</h4>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post" class="row g-3">
+
+                        <!-- Borrower -->
+                        <div class="col-md-6 form-floating">
+                            <input asp-for="Borrower" class="form-control" placeholder="Borrower Name" />
+                            <label asp-for="Borrower"></label>
+                            <span asp-validation-for="Borrower" class="text-danger small"></span>
+                        </div>
+
+                        <!-- Book -->
+                        <div class="col-md-6 form-floating">
+                            <select asp-for="BookId" asp-items="Model.Books" class="form-select">
+                                <option value="">-- Select a book --</option>
+                            </select>
+                            <label asp-for="BookId"></label>
+                            <span asp-validation-for="BookId" class="text-danger small"></span>
+                        </div>
+
+                        <!-- Borrow Date -->
+                        <div class="col-md-6 form-floating">
+                            <input asp-for="BorrowDate" type="date" class="form-control" placeholder="Borrow Date" />
+                            <label asp-for="BorrowDate"></label>
+                        </div>
+
+                        <!-- Due Date -->
+                        <div class="col-md-6 form-floating">
+                            <input asp-for="DueDate" type="date" class="form-control" placeholder="Due Date" />
+                            <label asp-for="DueDate"></label>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="col-12 text-end mt-3">
+                            <button type="submit" class="btn btn-primary px-4">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

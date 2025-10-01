@@ -20,18 +20,6 @@ namespace Library_Management_System_App.Controllers
             return View(await _context.Books.ToListAsync());
         }
 
-        // GET: Books/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null) return NotFound();
-
-            var book = await _context.Books.FirstOrDefaultAsync(m => m.Id == id);
-            if (book == null) return NotFound();
-
-            return View(book);
-        }
-
-        // GET: Books/Create
         public IActionResult Create()
         {
             return View();
@@ -87,30 +75,21 @@ namespace Library_Management_System_App.Controllers
             }
             return View(book);
         }
-
-        // GET: Books/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null) return NotFound();
-
-            var book = await _context.Books.FirstOrDefaultAsync(m => m.Id == id);
-            if (book == null) return NotFound();
-
-            return View(book);
-        }
+        
 
         // POST: Books/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> Delete(int id)
         {
             var book = await _context.Books.FindAsync(id);
-            if (book != null)
-            {
-                _context.Books.Remove(book);
-                await _context.SaveChangesAsync();
-            }
+            if (book == null) return NotFound();
+
+            _context.Books.Remove(book);
+            await _context.SaveChangesAsync();
+
             return RedirectToAction(nameof(Index));
         }
+
     }
 }

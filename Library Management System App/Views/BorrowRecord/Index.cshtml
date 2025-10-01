@@ -1,17 +1,17 @@
-﻿@model IEnumerable<Library_Management_System_App.Models.Book>
+﻿@model IEnumerable<Library_Management_System_App.Models.BorrowRecord>
 
-<h2>Books</h2>
+<h2>Borrow Records</h2>
 <p>
-    <a asp-action="Create" class="btn btn-primary">Add New Book</a>
+    <a asp-action="Create" class="btn btn-primary">Borrow a Book</a>
 </p>
 <table id="datatables" class="table table-bordered">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>ISBN</th>
-            <th>Quantity</th>
-            <th>Published Date</th>
+            <th>Borrower</th>
+            <th>Book</th>
+            <th>Borrow Date</th>
+            <th>Due Date</th>
+            <th>Return Date</th>
             <th>Actions</th>
         </tr>
     </thead>
@@ -19,11 +19,11 @@
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.Title</td>
-                <td>@item.Author</td>
-                <td>@item.ISBN</td>
-                <td>@item.Quantity</td>
-                <td>@item.PublishedDate.ToShortDateString()</td>
+                <td>@item.Borrower</td>
+                <td>@(item.Book != null ? item.Book.Title : "N/A")</td>
+                <td>@item.BorrowDate.ToShortDateString()</td>
+                <td>@item.DueDate.ToShortDateString()</td>
+                <td>@item.ReturnDate</td>
                 <td class="text-nowrap">
                     <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary me-2">
                         <i class="bi bi-pencil-square"></i> Edit
@@ -40,6 +40,7 @@
         }
     </tbody>
 </table>
+
 @section Scripts {
     <script src="~/js/datatables.js"></script>
 }
