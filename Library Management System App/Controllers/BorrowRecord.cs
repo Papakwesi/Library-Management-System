@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace Library_Management_System_App.Controllers
@@ -34,12 +35,7 @@ namespace Library_Management_System_App.Controllers
             var vm = new BorrowRecordVM
             {
 
-                Books = _context.Books
-                    .Select(b => new SelectListItem
-                    {
-                        Value = b.Id.ToString(),
-                        Text = b.Title
-                    })
+                Books = _context.Books.Select(b => new SelectListItem { Value = b.Id.ToString(),Text = b.Title})
                     .ToList()
             };
 
@@ -63,8 +59,16 @@ namespace Library_Management_System_App.Controllers
                 };
 
                 _context.BorrowRecords.Add(borrowRecord);
+
+                var book = await _context.Books.FindAsync(model.BookId);
+                if (book != null && book.Quantity > 0)
+                {
+                    book.Quantity -= 1;
+                }
+
                 await _context.SaveChangesAsync();
                 TempData["success"] = "Borrow record created successfully!";
+
                 return RedirectToAction(nameof(Index));
             }
 
@@ -131,8 +135,14 @@ namespace Library_Management_System_App.Controllers
             record.DueDate = model.DueDate;
             record.ReturnDate = model.ReturnDate;
 
+            var book = await _context.Books.FindAsync(record.BookId);
+            if(book != null)
+            {
+                book.Quantity += 1;
+            }
+
             await _context.SaveChangesAsync();
-            TempData["info"] = "Borrow record updated successfully!";
+            TempData["success"] = "Borrow record updated successfully!";
             return RedirectToAction(nameof(Index));
         }
 
@@ -145,7 +155,7 @@ namespace Library_Management_System_App.Controllers
 
             _context.BorrowRecords.Remove(record);
             await _context.SaveChangesAsync();
-            TempData["error"] = "Borrow record deleted!";
+            TempData["success"] = "Borrow record deleted successfully!";
             return RedirectToAction(nameof(Index));
         }
     }

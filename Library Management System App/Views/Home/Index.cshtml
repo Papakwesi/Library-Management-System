@@ -1,8 +1,76 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <!-- Welcome -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold text-primary">📚 Library Management System</h1>
+        <p class="lead text-muted">Manage your books, borrowers, and records with ease.</p>
+    </div>
+
+    <!-- Quick Action Cards -->
+    <div class="row g-4 justify-content-center">
+        <!-- Books -->
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 text-center h-100">
+                <div class="card-body">
+                    <i class="bi bi-book fs-1 text-primary"></i>
+                    <h5 class="card-title mt-3">Books</h5>
+                    <p class="card-text text-muted">Add, edit, and manage your library collection.</p>
+                    <a asp-controller="Books" asp-action="Index" class="btn btn-primary px-4">Manage Books</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Borrow Records -->
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 text-center h-100">
+                <div class="card-body">
+                    <i class="bi bi-journal-check fs-1 text-success"></i>
+                    <h5 class="card-title mt-3">Borrow Records</h5>
+                    <p class="card-text text-muted">Track borrowed and returned books.</p>
+                    <a asp-controller="BorrowRecord" asp-action="Index" class="btn btn-success px-4">Manage Records</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="row text-center mt-5 g-4">
+        <div class="col-md-3">
+            <div class="card bg-light shadow-sm border-0">
+                <div class="card-body">
+                    <h3 class="fw-bold text-primary">@ViewBag.totalBooks</h3>
+                    <p class="text-muted mb-0">Total Books</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light shadow-sm border-0">
+                <div class="card-body">
+                    <h3 class="fw-bold text-success">@ViewBag.totalQuantity</h3>
+                    <p class="text-muted mb-0">Available Copies</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light shadow-sm border-0">
+                <div class="card-body">
+                    <h3 class="fw-bold text-warning">@ViewBag.activeBorrowers</h3>
+                    <p class="text-muted mb-0">Active Borrows</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card bg-light shadow-sm border-0">
+                <div class="card-body">
+                    <h3 class="fw-bold text-danger">@ViewBag.OverdueCount</h3>
+                    <p class="text-muted mb-0">Overdue Books</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+

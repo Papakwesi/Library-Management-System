@@ -34,6 +34,7 @@ namespace Library_Management_System_App.Controllers
             {
                 _context.Add(book);
                 await _context.SaveChangesAsync();
+                TempData["success"] = "Book created successfully!";
                 return RedirectToAction(nameof(Index));
             }
             return View(book);
@@ -63,6 +64,7 @@ namespace Library_Management_System_App.Controllers
                 {
                     _context.Update(book);
                     await _context.SaveChangesAsync();
+                    TempData["SuccessMessage"] = "Book updated successfully!";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -88,6 +90,7 @@ namespace Library_Management_System_App.Controllers
             _context.Books.Remove(book);
             await _context.SaveChangesAsync();
 
+            TempData["success"] = "Book deleted successfully!";
             return RedirectToAction(nameof(Index));
         }
 

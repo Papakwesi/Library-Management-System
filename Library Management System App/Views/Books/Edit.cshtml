@@ -8,7 +8,7 @@
                     <h4 class="mb-0">Update Book</h4>
                 </div>
                 <div class="card-body">
-                    <form asp-action="Edit" method="post" class="row g-3">
+                    <form asp-action="Edit" method="post" class="row g-3" id="editForm">
                         <input type="hidden" asp-for="Id" />
 
                         <!-- Title -->
@@ -60,3 +60,6 @@
         </div>
     </div>
 </div>
+@section Scripts {
+    <script src="~/js/sweetalerts.js"></script>
+}
