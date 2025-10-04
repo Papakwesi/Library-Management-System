@@ -30,7 +30,7 @@ namespace Library_Management_System_App.Controllers
         }
 
         // GET: BorrowRecord/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             var vm = new BorrowRecordVM
             {

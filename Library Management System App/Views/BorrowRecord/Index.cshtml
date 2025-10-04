@@ -18,12 +18,12 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
+            <tr class="@(item.DueDate < DateTime.Now ? "table-danger" : "")">
                 <td>@item.Borrower</td>
                 <td>@(item.Book != null ? item.Book.Title : "N/A")</td>
                 <td>@item.BorrowDate.ToShortDateString()</td>
                 <td>@item.DueDate.ToShortDateString()</td>
-                <td>@item.ReturnDate</td>
+                <td>@(item.ReturnDate?.ToShortDateString() ?? "Not Returned")</td>
                 <td class="text-nowrap">
                     <a id="editBookForm" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-primary me-2">
                         <i class="bi bi-pencil-square"></i> Edit
