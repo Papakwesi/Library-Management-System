@@ -1,6 +1,7 @@
 ﻿using Library_Management_System_App.Models;
 using Library_Management_System_App.ViewModels;
 using LibraryManagementSystem.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace Library_Management_System_App.Controllers
 {
+    [Authorize(Roles = "SuperAdmin")]
     public class BorrowRecordController : Controller
     {
         private readonly ApplicationDbContext _context;

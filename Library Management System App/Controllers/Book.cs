@@ -1,10 +1,12 @@
 ﻿using Library_Management_System_App.Models;
 using LibraryManagementSystem.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Library_Management_System_App.Controllers
 {
+    [Authorize(Roles = "SuperAdmin")]
     public class BooksController : Controller
     {
         private readonly ApplicationDbContext _context;

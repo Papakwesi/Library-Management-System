@@ -1,10 +1,12 @@
 using Library_Management_System_App.Models;
 using LibraryManagementSystem.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace Library_Management_System_App.Controllers
 {
+    [Authorize(Roles = "SuperAdmin")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

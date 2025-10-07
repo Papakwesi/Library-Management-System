@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -19,43 +19,52 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand logo-btn palette-teal" asp-area="" asp-controller="Home" asp-action="Index" aria-label="Library">
-                    <span class="logo-emblem" role="img" aria-hidden="true">
-                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-                            <!-- ribbon/bookmark L shape -->
-                            <path d="M14 8h28v12l6-4v36L32 44V20H14z" />
+        <nav class="navbar navbar-light bg-light flex-column position-fixed top-0 start-0 vh-100 shadow-sm p-3 sidebar">
+            <!-- Logo -->
+            <a class="navbar-brand mb-4 text-center" asp-area="" asp-controller="Home" asp-action="Index">
+                <span class="logo-emblem" role="img" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="10" width="52" height="44" rx="6" fill="#158cba" />
+                        <rect x="12" y="14" width="12" height="34" rx="2" fill="rgba(255,255,255,0.9)" />
+                        <rect x="28" y="14" width="10" height="34" rx="2" fill="rgba(255,255,255,0.75)" />
+                        <rect x="42" y="14" width="8" height="34" rx="2" fill="rgba(255,255,255,0.55)" />
+                    </svg>
+                </span>
+                <div class="fw-bold text-primary mt-1 fs-5">Library</div>
+            </a>
 
-                            <!-- LMS inside emblem -->
-                            <text x="50%" y="60" text-anchor="middle" fill="white" font-size="16" font-family="Arial, sans-serif" font-weight="bold">
-                                LMS
-                            </text>
-                        </svg>
-                    </span>
-                </a>
+            <!-- Navigation Links -->
+            <ul class="navbar-nav flex-column w-100">
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="bi bi-house-door-fill me-2"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark d-flex align-items-center" asp-area="" asp-controller="Books" asp-action="Index">
+                        <i class="bi bi-book-fill me-2"></i> Books
+                    </a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark d-flex align-items-center" asp-area="" asp-controller="BorrowRecord" asp-action="Index">
+                        <i class="bi bi-journal-check me-2"></i> Borrow Records
+                    </a>
+                </li>
+            </ul>
 
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+            <!-- Bottom Section -->
+            <div class="mt-auto w-100 text-center">
+                <div class="login-section mb-3">
+                    <partial name="_LoginPartial" />
                 </div>
-                <button id="themeToggle" class="btn btn-outline-secondary btn-sm ms-3">
+                <button id="themeToggle" class="btn btn-outline-secondary btn-sm w-100">
                     <i class="bi bi-moon-fill"></i> Dark Mode
                 </button>
             </div>
         </nav>
+
     </header>
+
 
     <div class="container flex-fill">
         <main role="main" class="pb-3">
@@ -99,6 +108,7 @@
     <!-- Your custom scripts -->
     <script src="~/js/toast-notifications.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/theme-toggle.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
@@ -128,27 +138,5 @@
     </script>
 }
 
-<script>
-    const toggleBtn = document.getElementById("themeToggle");
-
-    toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-
-        if (document.body.classList.contains("dark-mode")) {
-            toggleBtn.innerHTML = '<i class="bi bi-sun-fill"></i> Light Mode';
-            localStorage.setItem("theme", "dark");
-        } else {
-            toggleBtn.innerHTML = '<i class="bi bi-moon-fill"></i> Dark Mode';
-            localStorage.setItem("theme", "light");
-        }
-    });
-
-    // Load saved preference
-    if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-        toggleBtn.innerHTML = '<i class="bi bi-sun-fill"></i> Light Mode';
-    }
-
-</script>
 
 

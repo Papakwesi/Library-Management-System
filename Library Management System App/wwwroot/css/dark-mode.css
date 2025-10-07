@@ -320,3 +320,13 @@ body {
         body.dark-mode .container {
             background-color: transparent !important;
         }
+
+        body.dark-mode #themeToggle {
+            color: white !important;
+            border-color: #ddd !important;
+        }
+
+            body.dark-mode #themeToggle:hover {
+                background-color: white !important;
+                color: #222 !important;
+            }
