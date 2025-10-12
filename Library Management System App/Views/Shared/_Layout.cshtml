@@ -19,35 +19,44 @@
 </head>
 <body class="d-flex flex-column min-vh-100">
     <header>
-        <nav class="navbar navbar-light bg-light flex-column position-fixed top-0 start-0 vh-100 shadow-sm p-3 sidebar">
+        <nav class="navbar navbar-light flex-column position-fixed top-0 start-0 vh-100 shadow p-3 sidebar">
             <!-- Logo -->
             <a class="navbar-brand mb-4 text-center" asp-area="" asp-controller="Home" asp-action="Index">
                 <span class="logo-emblem" role="img" aria-hidden="true">
-                    <svg viewBox="0 0 64 64" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="6" y="10" width="52" height="44" rx="6" fill="#158cba" />
+                    <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="10" width="52" height="44" rx="8" fill="#158cba" />
                         <rect x="12" y="14" width="12" height="34" rx="2" fill="rgba(255,255,255,0.9)" />
                         <rect x="28" y="14" width="10" height="34" rx="2" fill="rgba(255,255,255,0.75)" />
                         <rect x="42" y="14" width="8" height="34" rx="2" fill="rgba(255,255,255,0.55)" />
                     </svg>
                 </span>
-                <div class="fw-bold text-primary mt-1 fs-5">Library</div>
+                <div class="fw-bold mt-2 fs-4">Library<span class="text-primary">MS</span></div>
             </a>
 
             <!-- Navigation Links -->
-            <ul class="navbar-nav flex-column w-100">
-                <li class="nav-item mb-2">
-                    <a class="nav-link text-dark d-flex align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
-                        <i class="bi bi-house-door-fill me-2"></i> Home
+            <ul class="navbar-nav flex-column w-100 mt-3">
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center nav-menu-item" asp-area="" asp-controller="Home" asp-action="Index">
+                        <i class="bi bi-house-door-fill me-3 fs-5"></i>
+                        <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="nav-item mb-2">
-                    <a class="nav-link text-dark d-flex align-items-center" asp-area="" asp-controller="Books" asp-action="Index">
-                        <i class="bi bi-book-fill me-2"></i> Books
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center nav-menu-item" asp-area="" asp-controller="Books" asp-action="Index">
+                        <i class="bi bi-book-fill me-3 fs-5"></i>
+                        <span>Books</span>
                     </a>
                 </li>
-                <li class="nav-item mb-2">
-                    <a class="nav-link text-dark d-flex align-items-center" asp-area="" asp-controller="BorrowRecord" asp-action="Index">
-                        <i class="bi bi-journal-check me-2"></i> Borrow Records
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center nav-menu-item" asp-area="" asp-controller="BorrowRecord" asp-action="Index">
+                        <i class="bi bi-journal-check me-3 fs-5"></i>
+                        <span>Borrow Records</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center nav-menu-item" asp-area="" asp-controller="Home" asp-action="Privacy">
+                        <i class="bi bi-shield-check me-3 fs-5"></i>
+                        <span>Privacy</span>
                     </a>
                 </li>
             </ul>

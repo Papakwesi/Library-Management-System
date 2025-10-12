@@ -161,3 +161,92 @@ body.dark-mode .sidebar .nav-link:hover {
 .sidebar form {
     display: inline-block;
 }
+
+    .sidebar .navbar-brand {
+        padding: 0.5rem 0;
+    }
+
+    .sidebar .nav-item {
+        margin-bottom: 0.75rem;
+    }
+
+    .sidebar .nav-link {
+        color: #333;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        padding: 0.6rem 1rem;
+        transition: all 0.3s ease;
+    }
+
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            background-color: #f0f6f0;
+            color: #158cba;
+        }
+
+.nav-menu-item i {
+    width: 24px; /* Ensures icon alignment consistency */
+    text-align: center;
+}
+
+.sidebar .login-section {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 1rem;
+}
+
+#themeToggle {
+    border-radius: 0.5rem;
+}
+
+
+/*Area (Logi.cshtml*/
+
+.login-page {
+    background: linear-gradient(135deg, #f8fafc, #e9f5ff);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-logo svg {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.form-floating > label {
+    color: #6c757d;
+}
+
+.form-control:focus {
+    border-color: #158cba;
+    box-shadow: 0 0 0 0.2rem rgba(21, 140, 186, 0.25);
+}
+
+.btn-primary {
+    background-color: #158cba;
+    border-color: #158cba;
+}
+
+    .btn-primary:hover {
+        background-color: #1276a2;
+        border-color: #1276a2;
+    }
+
+.external-login button {
+    width: 42px;
+    height: 42px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
