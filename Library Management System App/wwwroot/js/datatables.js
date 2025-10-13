@@ -13,19 +13,19 @@
             },
             {
                 extend: 'excel',
-                className: 'btn btn-sm btn-outline-success'
+                className: 'btn btn-sm btn-outline-secondary'
             },
             {
                 extend: 'pdf',
-                className: 'btn btn-sm btn-outline-danger'
+                className: 'btn btn-sm btn-outline-secondary'
             },
             {
                 extend: 'print',
-                className: 'btn btn-sm btn-outline-primary'
+                className: 'btn btn-sm btn-outline-secondary'
             },
             {
                 extend: 'colvis',
-                className: 'btn btn-sm btn-outline-dark'
+                className: 'btn btn-sm btn-outline-secondary'
             }
         ]
     });

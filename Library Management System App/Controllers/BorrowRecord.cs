@@ -68,6 +68,21 @@ namespace Library_Management_System_App.Controllers
                     book.Quantity -= 1;
                 }
 
+                if (book != null && book.Quantity < 1)
+                {
+                    TempData["error"] = "Book out of stock!";
+
+                    model.Books = _context.Books
+                        .Select(b => new SelectListItem
+                        {
+                            Value = b.Id.ToString(),
+                            Text = b.Title
+                        })
+                        .ToList();
+
+                    return View(model);
+                }
+
                 await _context.SaveChangesAsync();
                 TempData["success"] = "Borrow record created successfully!";
 
@@ -85,6 +100,8 @@ namespace Library_Management_System_App.Controllers
 
             return View(model);
         }
+
+        //Edit Get
         public IActionResult Edit(int id)
         {
             var record = _context.BorrowRecords.FirstOrDefault(b => b.Id == id);
@@ -110,6 +127,7 @@ namespace Library_Management_System_App.Controllers
             return View(vm);
         }
 
+        //Edit Post
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, BorrowRecordVM model)
@@ -148,6 +166,7 @@ namespace Library_Management_System_App.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        //Delete
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)

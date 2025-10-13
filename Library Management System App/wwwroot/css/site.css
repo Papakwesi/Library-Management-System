@@ -250,3 +250,114 @@ body.dark-mode .sidebar .nav-link:hover {
         transform: translateY(0);
     }
 }
+
+/* Ensure sidebar stays above datatable */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 230px;
+    z-index: 1000; 
+    background-color: #fff;
+}
+
+#datatables {
+    position: relative;
+    overflow-x: auto;
+    width: 100%;
+    z-index: 1; 
+}
+
+#datatables table {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.dt-buttons .btn {
+    margin-right: 2px;
+}
+
+/* Liquid glass style cards */
+.card-body {
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    color: #fff;
+}
+
+    .card-body:hover {
+        box-shadow: 0 8px 40px rgba(21, 140, 186, 0.3);
+        border-color: rgba(255, 255, 255, 0.35);
+    }
+
+/* Icon circle styling */
+.data-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Icon circle styling */
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 991.98px) {
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Remove padding/margin from all Bootstrap layout wrappers */
+    .container, .container-fluid, .row, main, .content-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+    }
+
+    /* Make top navbar full-width */
+    .mobile-topbar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100vw !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        z-index: 1050 !important;
+    }
+
+    /* Sidebar overlay mode */
+    .sidebar {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 240px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1100;
+    }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+}
