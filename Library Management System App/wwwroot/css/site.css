@@ -5,7 +5,7 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 16px;
-  }
+}
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
@@ -80,33 +80,33 @@ body.dark-mode {
     color: #f8f9fa !important;
 }
 
-    body.dark-mode .navbar,
-    body.dark-mode .card,
-    body.dark-mode .modal-content,
-    body.dark-mode .table {
-        background-color: #1e1e1e !important;
-        color: #f8f9fa !important;
-    }
+body.dark-mode .navbar,
+body.dark-mode .card,
+body.dark-mode .modal-content,
+body.dark-mode .table {
+    background-color: #1e1e1e !important;
+    color: #f8f9fa !important;
+}
 
-    body.dark-mode .btn {
-        border-color: #444 !important;
-    }
+body.dark-mode .btn {
+    border-color: #444 !important;
+}
 
-    body.dark-mode a {
-        color: #66c2ff !important;
-    }
+body.dark-mode a {
+    color: #66c2ff !important;
+}
 
-    body.dark-mode .table thead {
-        background-color: #2b2b2b !important;
-        color: #f8f9fa !important;
-    }
+body.dark-mode .table thead {
+    background-color: #2b2b2b !important;
+    color: #f8f9fa !important;
+}
 
-    body.dark-mode .table-danger {
-        background-color: #6d1b1b !important;
-        color: #fff !important;
-    }
+body.dark-mode .table-danger {
+    background-color: #6d1b1b !important;
+    color: #fff !important;
+}
 
-    /* Sidebar base layout */
+/* Sidebar base layout */
 .sidebar {
     width: 230px; /* slimmer sidebar */
     transition: width 0.3s ease;
@@ -162,27 +162,27 @@ body.dark-mode .sidebar .nav-link:hover {
     display: inline-block;
 }
 
-    .sidebar .navbar-brand {
-        padding: 0.5rem 0;
-    }
+.sidebar .navbar-brand {
+    padding: 0.5rem 0;
+}
 
-    .sidebar .nav-item {
-        margin-bottom: 0.75rem;
-    }
+.sidebar .nav-item {
+    margin-bottom: 0.75rem;
+}
 
-    .sidebar .nav-link {
-        color: #333;
-        font-weight: 500;
-        border-radius: 0.5rem;
-        padding: 0.6rem 1rem;
-        transition: all 0.3s ease;
-    }
+.sidebar .nav-link {
+    color: #333;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s ease;
+}
 
-        .sidebar .nav-link:hover,
-        .sidebar .nav-link.active {
-            background-color: #f0f6f0;
-            color: #158cba;
-        }
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background-color: #f0f6f0;
+    color: #158cba;
+}
 
 .nav-menu-item i {
     width: 24px; /* Ensures icon alignment consistency */
@@ -201,55 +201,55 @@ body.dark-mode .sidebar .nav-link:hover {
 
 /*Area (Logi.cshtml*/
 
-.login-page {
-    background: linear-gradient(135deg, #f8fafc, #e9f5ff);
-}
+    .login-page {
+        background: linear-gradient(135deg, #f8fafc, #e9f5ff);
+    }
 
-.login-card {
-    width: 100%;
-    max-width: 420px;
-    animation: fadeIn 0.5s ease-in-out;
-}
+    .login-card {
+        width: 100%;
+        max-width: 420px;
+        animation: fadeIn 0.5s ease-in-out;
+    }
 
-.login-logo svg {
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-}
+    .login-logo svg {
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
 
-.form-floating > label {
-    color: #6c757d;
-}
+    .form-floating > label {
+        color: #6c757d;
+    }
 
-.form-control:focus {
-    border-color: #158cba;
-    box-shadow: 0 0 0 0.2rem rgba(21, 140, 186, 0.25);
-}
+    .form-control:focus {
+        border-color: #158cba;
+        box-shadow: 0 0 0 0.2rem rgba(21, 140, 186, 0.25);
+    }
 
-.btn-primary {
-    background-color: #158cba;
-    border-color: #158cba;
-}
+    .btn-primary {
+        background-color: #158cba;
+        border-color: #158cba;
+    }
 
     .btn-primary:hover {
         background-color: #1276a2;
         border-color: #1276a2;
     }
 
-.external-login button {
-    width: 42px;
-    height: 42px;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+    .external-login button {
+        width: 42px;
+        height: 42px;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
-}
 
 /* Ensure sidebar stays above datatable */
 .sidebar {
@@ -285,10 +285,10 @@ body.dark-mode .sidebar .nav-link:hover {
     color: #fff;
 }
 
-    .card-body:hover {
-        box-shadow: 0 8px 40px rgba(21, 140, 186, 0.3);
-        border-color: rgba(255, 255, 255, 0.35);
-    }
+.card-body:hover {
+    box-shadow: 0 8px 40px rgba(21, 140, 186, 0.3);
+    border-color: rgba(255, 255, 255, 0.35);
+}
 
 /* Icon circle styling */
 .data-circle {
@@ -357,7 +357,389 @@ body.dark-mode .sidebar .nav-link:hover {
         z-index: 1100;
     }
 
-        .sidebar.active {
-            transform: translateX(0);
-        }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}
+
+/* Ensure sidebar content is scrollable and contained */
+.sidebar {
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100vh; /* Restrict to viewport height */
+}
+
+@media (max-height: 600px) {
+    .sidebar .navbar-nav {
+        max-height: 40vh; /* Limit nav links height to allow space for bottom section */
+        overflow-y: auto; /* Scrollable nav links */
+    }
+
+    .logo-emblem, .navbar-brand .fs-4 {
+        transform: scale(0.8); /* Scale down logo and title for smaller screens */
+    }
+}
+
+/* Base styling for section-title */
+.section-title {
+    font-size: 2rem; /* Larger for prominence */
+    font-weight: 800; /* Extra bold for modern look */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /* Modern sans-serif font stack */
+    background: linear-gradient(90deg, #158cba 0%, #0d6efd 100%); /* Gradient matching Bootswatch Lux primary */
+    -webkit-background-clip: text; /* Apply gradient to text */
+    background-clip: text;
+    color: transparent; /* Make text transparent to show gradient */
+    margin-bottom: 2rem; /* Increased spacing for hierarchy */
+    margin-top: 2rem; /* Increased spacing for hierarchy */
+    padding: 0.5rem 0; /* Vertical padding */
+    position: relative; /* For pseudo-elements */
+    text-transform: uppercase; /* Modern and clean */
+    letter-spacing: 0.08em; /* Wider spacing for elegance */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth hover transitions */
+}
+
+/* Pseudo-element for animated underline */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px; /* Thicker underline */
+    background: linear-gradient(90deg, #158cba, #0d6efd); /* Matching gradient */
+    transition: width 0.4s ease; /* Smooth expansion */
+}
+
+/* Hover effect */
+.section-title:hover {
+    transform: translateY(-3px); /* Lift effect */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.section-title:hover::after {
+    width: 100%; /* Underline expands on hover */
+}
+
+/* Dark mode support */
+.dark-mode .section-title {
+    background: linear-gradient(90deg, #4dabf5 0%, #6ec6ff 100%); /* Lighter gradient for dark mode */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Stronger shadow for dark backgrounds */
+}
+
+.dark-mode .section-title::after {
+    background: linear-gradient(90deg, #4dabf5, #6ec6ff); /* Matching dark mode gradient */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .section-title {
+        font-size: 1.6rem; /* Smaller for mobile */
+        margin-bottom: 1.2rem; /* Reduced spacing */
+        letter-spacing: 0.06em; /* Slightly tighter spacing */
+    }
+}
+
+@media (max-height: 600px) {
+    .section-title {
+        font-size: 1.4rem; /* Even smaller for low-height devices */
+        margin-bottom: 1rem;
+        padding: 0.3rem 0; /* Compact padding */
+    }
+    .section-title::after {
+        height: 2px; /* Thinner underline for compact screens */
+    }
+}
+
+/* Load animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    animation: fadeInUp 0.6s ease-out forwards; /* Smooth fade-in and slide-up */
+}
+
+/* Ensure sidebar integration (if section-title is used in sidebar) */
+@media (max-width: 991.98px) {
+    .sidebar .section-title {
+        font-size: 1.5rem; /* Adjust for sidebar width */
+        max-width: 220px; /* Fit within 240px sidebar with padding */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center; /* Center in sidebar */
+    }
+}
+
+/* Library Hero Section */
+.library-hero {
+    background: #ffffff; /* Clean white background */
+    padding: 1.8rem 0; /* Compact for elegance */
+    position: relative;
+}
+
+/* Hero Title */
+.library-title {
+    font-size: 1.6rem; /* Smaller, elegant size */
+    font-weight: 600;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #0a3d62; /* Deep teal */
+    letter-spacing: 0.05em;
+    position: relative;
+    display: inline-block;
+    transition: text-shadow 0.3s ease;
+}
+
+    .library-title .book-icon {
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        color: #0a3d62;
+        animation: bookPulse 1s ease-in-out infinite;
+    }
+
+    .library-title .letter {
+        opacity: 0;
+        display: inline-block;
+        transform: scale(0.8);
+        animation: letterRipple 0.15s ease-out forwards;
+    }
+
+    .library-title:hover {
+        text-shadow: 0 0 8px rgba(228, 176, 74, 0.5); /* Soft gold glow */
+    }
+
+    /* Sequential letter animation */
+    .library-title .letter:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .library-title .letter:nth-child(3) {
+        animation-delay: 0.15s;
+    }
+
+    .library-title .letter:nth-child(4) {
+        animation-delay: 0.2s;
+    }
+
+    .library-title .letter:nth-child(5) {
+        animation-delay: 0.25s;
+    }
+
+    .library-title .letter:nth-child(6) {
+        animation-delay: 0.3s;
+    }
+
+    .library-title .letter:nth-child(7) {
+        animation-delay: 0.35s;
+    }
+
+    .library-title .letter:nth-child(8) {
+        animation-delay: 0.4s;
+    }
+
+    .library-title .letter:nth-child(9) {
+        animation-delay: 0.45s;
+    }
+
+    .library-title .letter:nth-child(10) {
+        animation-delay: 0.5s;
+    }
+
+    .library-title .letter:nth-child(11) {
+        animation-delay: 0.55s;
+    }
+
+    .library-title .letter:nth-child(12) {
+        animation-delay: 0.6s;
+    }
+
+    .library-title .letter:nth-child(13) {
+        animation-delay: 0.65s;
+    }
+
+    .library-title .letter:nth-child(14) {
+        animation-delay: 0.7s;
+    }
+
+    .library-title .letter:nth-child(15) {
+        animation-delay: 0.75s;
+    }
+
+    .library-title .letter:nth-child(16) {
+        animation-delay: 0.8s;
+    }
+
+    .library-title .letter:nth-child(17) {
+        animation-delay: 0.85s;
+    }
+
+    .library-title .letter:nth-child(18) {
+        animation-delay: 0.9s;
+    }
+
+    .library-title .letter:nth-child(19) {
+        animation-delay: 0.95s;
+    }
+
+    .library-title .letter:nth-child(20) {
+        animation-delay: 1.0s;
+    }
+
+    .library-title .letter:nth-child(21) {
+        animation-delay: 1.05s;
+    }
+
+    .library-title .letter:nth-child(22) {
+        animation-delay: 1.1s;
+    }
+
+    .library-title .letter:nth-child(23) {
+        animation-delay: 1.15s;
+    }
+
+    .library-title .letter:nth-child(24) {
+        animation-delay: 1.2s;
+    }
+
+    /* Glowing underline */
+    .library-title::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        width: 0;
+        height: 1px; /* Thin, elegant underline */
+        background: #e4b04a; /* Soft gold */
+        transition: width 0.4s ease, left 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .library-title:hover::after {
+        width: 80%;
+        left: 10%;
+        box-shadow: 0 0 6px rgba(228, 176, 74, 0.6); /* Glowing gold */
+    }
+
+/* Hero Subtitle */
+.library-subtitle {
+    font-size: 0.9rem; /* Compact and clean */
+    font-weight: 400;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #4a4a4a; /* Muted gray */
+    max-width: 380px;
+    margin: 0.5rem auto 0;
+    min-height: 1.8rem; /* Prevent layout shift during typing */
+}
+
+/* Animations */
+@keyframes bookPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes letterRipple {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(10px);
+    }
+
+    50% {
+        transform: scale(1.15) translateY(-2px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Dark Mode */
+.dark-mode .library-hero {
+    background: #1e2523; /* Charcoal */
+}
+
+.dark-mode .library-title {
+    color: #e0e0e0; /* Light gray */
+}
+
+    .dark-mode .library-title .book-icon {
+        color: #e0e0e0;
+    }
+
+    .dark-mode .library-title:hover {
+        text-shadow: 0 0 8px rgba(230, 184, 0, 0.5);
+    }
+
+    .dark-mode .library-title::after {
+        background: #e4b04a;
+    }
+
+.dark-mode .library-subtitle {
+    color: #a8a8a8;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .library-hero {
+        padding: 1.2rem 0;
+    }
+
+    .library-title {
+        font-size: 1.3rem;
+    }
+
+    .library-subtitle {
+        font-size: 0.8rem;
+        max-width: 85%;
+    }
+}
+
+@media (max-height: 600px) {
+    .library-hero {
+        padding: 0.8rem 0;
+    }
+
+    .library-title {
+        font-size: 1.1rem;
+    }
+
+    .library-subtitle {
+        font-size: 0.75rem;
+        margin-top: 0.3rem;
+    }
+}
+
+/* Sidebar Integration (if used in sidebar) */
+@media (max-width: 991.98px) {
+    .sidebar .library-hero {
+        padding: 0.8rem 0;
+    }
+
+    .sidebar .library-title {
+        font-size: 1rem;
+        max-width: 190px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .sidebar .library-subtitle {
+        font-size: 0.7rem;
+        max-width: 190px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
